@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'rakan.kersh.finalyapplicationrakan'
-    compileSdk {
+    compileSdk3 33 {
         version = release(37)
     }
 
