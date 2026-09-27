@@ -13,14 +13,20 @@ import rakan.kersh.finalyapplicationrakan.data.mySubjectTable.MySubject;
 import rakan.kersh.finalyapplicationrakan.data.mySubjectTable.MySubjectQuery;
 
 @Database(entities = {MyUser.class, MySubject.class, MyTask.class}, version =1)
-public class AppDataBase {
     public abstract class AppDatabase extends RoomDatabase{
-private static AppDataBase db;
+private static AppDatabase db;
 public abstract MyUserQuery getMyUserQuery();
 public abstract MySubjectQuery getMySubjectQuery();
-public static AppDataBase getDB(Context context){
-    if (db==null)
+public static AppDatabase getDB(Context context) {
+    if (db == null)
+    {
+        db = Room.databaseBuilder(context,
+                        AppDatabase.class,
+                        "samihDataBase")
+                .fallbackToDestructiveMigration()
+                .allowMainThreadQueries()
+                .build();
 }
-db =Room.databaseBuilder()
+    return db;
     }
 }
