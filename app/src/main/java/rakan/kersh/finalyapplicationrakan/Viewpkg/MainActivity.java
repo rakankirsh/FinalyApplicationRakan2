@@ -1,4 +1,4 @@
-package rakan.kersh.finalyapplicationrakan;
+package rakan.kersh.finalyapplicationrakan.Viewpkg;
 
 import android.os.Bundle;
 
@@ -8,6 +8,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import rakan.kersh.finalyapplicationrakan.R;
 import rakan.kersh.finalyapplicationrakan.data.AppDatabase;
 import rakan.kersh.finalyapplicationrakan.data.mySubjectTable.MySubject;
 import rakan.kersh.finalyapplicationrakan.data.mySubjectTable.MySubjectQuery;
