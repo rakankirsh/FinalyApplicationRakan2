@@ -7,44 +7,43 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="63dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:text="User Registration"
-        android:textSize="34sp" />
+        android:textSize="48sp" />
 
     <TextView
         android:id="@+id/etFullName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Full name" />
+        android:text="Full name"
+        android:textSize="48sp" />
 
     <TextView
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Email" />
+        android:text="Email"
+        android:textSize="48sp" />
 
     <TextView
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Password" />
+        android:text="Password"
+        android:textSize="48sp" />
 
     <TextView
         android:id="@+id/etPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Phone number" />
+        android:text="Phone number"
+        android:textSize="48sp" />
 
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Register" />
+        android:text="Register"
+        android:textSize="96sp" />
 
 </LinearLayout>

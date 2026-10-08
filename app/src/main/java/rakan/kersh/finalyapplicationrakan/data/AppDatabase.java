@@ -7,6 +7,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
 import rakan.kersh.finalyapplicationrakan.data.MyTaskTable.MyTask;
+import rakan.kersh.finalyapplicationrakan.data.MyTaskTable.MyTaskQuery;
 import rakan.kersh.finalyapplicationrakan.data.MyUserTable.MyUser;
 import rakan.kersh.finalyapplicationrakan.data.MyUserTable.MyUserQuery;
 import rakan.kersh.finalyapplicationrakan.data.mySubjectTable.MySubject;
@@ -17,6 +18,7 @@ import rakan.kersh.finalyapplicationrakan.data.mySubjectTable.MySubjectQuery;
 private static AppDatabase db;
 public abstract MyUserQuery getMyUserQuery();
 public abstract MySubjectQuery getMySubjectQuery();
+public abstract MyTaskQuery getMyTaskQuery();
 public static AppDatabase getDB(Context context) {
     if (db == null)
     {
@@ -28,5 +30,8 @@ public static AppDatabase getDB(Context context) {
                 .build();
 }
     return db;
+    }
+
+    public MyTaskQuery myTaskQuery() {
     }
 }

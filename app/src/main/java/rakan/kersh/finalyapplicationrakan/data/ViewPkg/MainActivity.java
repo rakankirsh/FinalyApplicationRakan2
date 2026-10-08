@@ -1,4 +1,4 @@
-package rakan.kersh.finalyapplicationrakan.Viewpkg;
+package rakan.kersh.finalyapplicationrakan.data.ViewPkg;
 
 import android.os.Bundle;
 
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         //kopijopuiop56456456
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
         AppDatabase db=AppDatabase.getDB(getApplicationContext());
         MySubjectQuery subjectQuery = db.getMySubjectQuery();
         MySubject s1=new MySubject();
