@@ -36,4 +36,18 @@ LiveData< List<MyTask>>  getAllTaskOrderBy(long userid_p,boolean isCompleted_p);
     @Query("SELECT * FROM MyTask WHERE userId=:userId ORDER BY importance DESC")
 
     LiveData<List<MyTask>> getTasksByUserIdAndTitle(long userId, String title);
+    @Query("SELECT * FROM MyTask WHERE priority=:priority ORDER BY importance DESC")
+ LiveData<List<MyTask>> getTasksByPriority (int priority);
+
+    void insert(MyTask[] tasks);
+
+    void update(MyTask[] tasks);
+    @Query("SELECT * FROM MyTask WHERE description=:description ORDER BY importance DESC")
+
+    void updateTask(long taskId, String title, String description, int priority);
+
+    void delete(MyTask[] tasks);
+    @Query("SELECT * FROM MyTask WHERE taskId=:taskId ORDER BY importance DESC")
+
+    void deleteTaskById(long taskId);
 }

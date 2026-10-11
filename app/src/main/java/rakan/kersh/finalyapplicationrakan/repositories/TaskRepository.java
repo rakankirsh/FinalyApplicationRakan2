@@ -33,7 +33,7 @@ public class TaskRepository {
     }
 
     public LiveData<List<MyTask>> getTasksByPriority(int priority) {
-        return taskQuery.getTasksByPriority(priortiy);
+        return taskQuery.getTasksByPriority(priority);
     }
 
     public LiveData<List<MyTask>> getTasksByUserIdAndTitle(
@@ -54,14 +54,13 @@ public class TaskRepository {
         taskQuery.updateTask(taskId, title, description, priority);
     }
 
-    public void delete(Mytask... tasks) {
+    public void delete(MyTask... tasks) {
         taskQuery.delete(tasks);
     }
 
-    public void deleteTaskById(long Id) {
+    public void deleteTaskById(long taskId) {
         taskQuery.deleteTaskById(taskId);
     }
 }
 
 
-}
