@@ -1,5 +1,7 @@
 package rakan.kersh.finalyapplicationrakan.data.MyUserTable;
 
+import androidx.lifecycle.LiveData;
+
 import java.util.List;
 
 public interface MyUserQuery {
@@ -28,4 +30,11 @@ public interface MyUserQuery {
 
     void update(MyUser...values);
 
+    LiveData<List<MyUser>> getAllUsers();
+
+    LiveData<List<MyUser>> getUsersByUserId(long userIds);
+
+    LiveData<List<MyUser>> getUsersByEmail(String myEmail);
+
+    LiveData<List<MyUser>> getUsersByPassw(String myPassw);
 }

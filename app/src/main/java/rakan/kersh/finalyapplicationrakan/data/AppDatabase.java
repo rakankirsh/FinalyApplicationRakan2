@@ -35,4 +35,8 @@ public static AppDatabase getDB(Context context) {
     public MyTaskQuery myTaskQuery() {
         return null;
     }
+
+    public MyUserQuery myUserQuery() {
+        return null;
+    }
 }
