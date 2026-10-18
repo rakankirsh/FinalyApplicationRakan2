@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData;
 import java.util.List;
 
 import rakan.kersh.finalyapplicationrakan.data.AppDatabase;
+import rakan.kersh.finalyapplicationrakan.data.MyTaskTable.MyTask;
 import rakan.kersh.finalyapplicationrakan.data.MyUserTable.MyUser;
 import rakan.kersh.finalyapplicationrakan.data.MyUserTable.MyUserQuery;
 
@@ -30,5 +31,8 @@ public class UserRepository {
         }
     public LiveData<List<MyUser>> getUserByPassw(String myPassw){
         return userQuery.getUsersByPassw(myPassw);
+    }
+    public LiveData<MyUser> getUserById(long userId) {
+        return userQuery.getUserById(userId);
     }
     }
