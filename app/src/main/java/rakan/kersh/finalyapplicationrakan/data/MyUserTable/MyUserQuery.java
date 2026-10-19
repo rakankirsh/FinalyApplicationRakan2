@@ -41,7 +41,7 @@ public interface MyUserQuery {
     //تعديل مستعمل او قائمة مستعملين
     @Update
     void update(MyUser...values);
-
+    @Query("SELECT * FROM MyUser")
     LiveData<List<MyUser>> getAllUsers();
 
     LiveData<List<MyUser>> getUsersByUserId(long userIds);

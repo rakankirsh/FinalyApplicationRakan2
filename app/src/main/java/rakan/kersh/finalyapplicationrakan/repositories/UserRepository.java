@@ -20,7 +20,7 @@ public class UserRepository {
         allUser = userQuery.getAllUsers();
     }
 
-    public LiveData<List<MyUser>> getAllUser() {
+    public LiveData<List<MyUser>> getAll() {
         return allUser; //userIds
     }
         public LiveData<List<MyUser>> getUsersByUserId(long userIds) {
@@ -34,5 +34,16 @@ public class UserRepository {
     }
     public LiveData<MyUser> getUserById(long userId) {
         return userQuery.getUserById(userId);
+    }
+
+    public void insertUser(MyUser myUser)
+    {
+        userQuery.insert(myUser);
+    }
+    public void deleteUser(MyUser myUser){
+        userQuery.delete(myUser);
+    }
+    public void  checkEmailPassw(String myEmail, String myPassw){
+        userQuery.checkEmailPassw(myEmail,myPassw);
     }
     }
