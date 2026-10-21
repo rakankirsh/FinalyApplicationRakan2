@@ -43,12 +43,14 @@ public interface MyUserQuery {
     void update(MyUser...values);
     @Query("SELECT * FROM MyUser")
     LiveData<List<MyUser>> getAllUsers();
-
+    @Query("SELECT * FROM MyUser WHERE keyid = :userIds LIMIT 1")
     LiveData<List<MyUser>> getUsersByUserId(long userIds);
+    @Query("SELECT * FROM MyUser WHERE email = :myEmail LIMIT 1")
 
     LiveData<List<MyUser>> getUsersByEmail(String myEmail);
+    @Query("SELECT * FROM MyUser WHERE passw = :myPassw LIMIT 1")
 
     LiveData<List<MyUser>> getUsersByPassw(String myPassw);
-
+    @Query("SELECT * FROM MyUser WHERE keyid = :userId LIMIT 1")
     LiveData<MyUser> getUserById(long userId);
 }
