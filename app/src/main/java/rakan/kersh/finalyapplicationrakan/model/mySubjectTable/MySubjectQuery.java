@@ -1,4 +1,4 @@
-package rakan.kersh.finalyapplicationrakan.data.mySubjectTable;
+package rakan.kersh.finalyapplicationrakan.model.mySubjectTable;
 
 import androidx.room.Dao;
 import androidx.room.Delete;

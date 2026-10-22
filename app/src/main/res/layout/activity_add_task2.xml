@@ -4,29 +4,29 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+    <EditText
         android:id="@+id/TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add New Task" />
+        android:hint="Add New Task" />
 
-    <TextView
+    <EditText
         android:id="@+id/etTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Task Title" />
+        android:hint="Task Title" />
 
-    <TextView
+    <EditText
         android:id="@+id/etDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Task Description" />
+        android:hint="Task Description" />
 
-    <TextView
+    <EditText
         android:id="@+id/etPriority"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Number" />
+        android:hint="Number" />
 
     <Button
         android:id="@+id/btnSaveTask"

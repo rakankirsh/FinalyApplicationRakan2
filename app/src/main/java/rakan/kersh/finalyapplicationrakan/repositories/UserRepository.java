@@ -6,10 +6,9 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-import rakan.kersh.finalyapplicationrakan.data.AppDatabase;
-import rakan.kersh.finalyapplicationrakan.data.MyTaskTable.MyTask;
-import rakan.kersh.finalyapplicationrakan.data.MyUserTable.MyUser;
-import rakan.kersh.finalyapplicationrakan.data.MyUserTable.MyUserQuery;
+import rakan.kersh.finalyapplicationrakan.model.AppDatabase;
+import rakan.kersh.finalyapplicationrakan.model.MyUserTable.MyUser;
+import rakan.kersh.finalyapplicationrakan.model.MyUserTable.MyUserQuery;
 
 public class UserRepository {
     private MyUserQuery userQuery;

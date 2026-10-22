@@ -6,9 +6,9 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-import rakan.kersh.finalyapplicationrakan.data.AppDatabase;
-import rakan.kersh.finalyapplicationrakan.data.MyTaskTable.MyTask;
-import rakan.kersh.finalyapplicationrakan.data.MyTaskTable.MyTaskQuery;
+import rakan.kersh.finalyapplicationrakan.model.AppDatabase;
+import rakan.kersh.finalyapplicationrakan.model.MyTaskTable.MyTask;
+import rakan.kersh.finalyapplicationrakan.model.MyTaskTable.MyTaskQuery;
 
 public class TaskRepository {
     private MyTaskQuery taskQuery;
@@ -34,6 +34,10 @@ public class TaskRepository {
 
     public LiveData<List<MyTask>> getTasksByPriority(int priority) {
         return taskQuery.getTasksByPriority(priority);
+    }
+
+    public LiveData<List<MyTask>> getTasksByUserId(long userId) {
+        return taskQuery.getTasksByUserId(userId);
     }
 
     public LiveData<List<MyTask>> getTasksByUserIdAndTitle(
@@ -62,5 +66,3 @@ public class TaskRepository {
         taskQuery.deleteTaskById(taskId);
     }
 }
-
-

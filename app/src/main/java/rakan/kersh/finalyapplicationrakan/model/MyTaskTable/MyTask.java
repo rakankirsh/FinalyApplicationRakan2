@@ -1,5 +1,4 @@
-package rakan.kersh.finalyapplicationrakan.data.MyTaskTable;
-
+package rakan.kersh.finalyapplicationrakan.model.MyTaskTable;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -7,10 +6,10 @@ import androidx.room.PrimaryKey;
 @Entity
 public class MyTask {
     @PrimaryKey(autoGenerate = true)
-    private long taskId;
-    private String title;
-    private String description;
-    private int priority;
+    public long taskId;
+    public String title;
+    public String description;
+    public int priority;
     public long keyId;
     public int importance;
     public String shortTitle;
@@ -20,5 +19,3 @@ public class MyTask {
     public long subjId;
     public long userId;
 }
-
-

@@ -1,4 +1,4 @@
-package rakan.kersh.finalyapplicationrakan.data.MyUserTable;
+package rakan.kersh.finalyapplicationrakan.model.MyUserTable;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;

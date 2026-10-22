@@ -1,4 +1,4 @@
-package rakan.kersh.finalyapplicationrakan.data.MyUserTable;
+package rakan.kersh.finalyapplicationrakan.model.MyUserTable;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -31,6 +31,12 @@ public class MyUser
     }
     public void setFullName(String fullName){
         this.fullName = fullName;
+    }
+    public long getUid() {
+        return uid;
+    }
+    public void setUid(long uid) {
+        this.uid = uid;
     }
     //.........
 }

@@ -4,39 +4,39 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+    <EditText
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="User Registration"
+        android:hint="User Registration"
         android:textSize="48sp" />
 
-    <TextView
+    <EditText
         android:id="@+id/etFullName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Full name"
+        android:hint="Full name"
         android:textSize="48sp" />
 
-    <TextView
+    <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:hint="Email"
         android:textSize="48sp" />
 
-    <TextView
+    <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Password"
+        android:hint="Password"
         android:textSize="48sp" />
 
-    <TextView
+    <EditText
         android:id="@+id/etPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Phone number"
+        android:hint="Phone number"
         android:textSize="48sp" />
 
     <Button

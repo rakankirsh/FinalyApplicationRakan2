@@ -1,4 +1,4 @@
-package rakan.kersh.finalyapplicationrakan.data.ViewPkg;
+package rakan.kersh.finalyapplicationrakan.model.ViewPkg;
 
 import android.os.Bundle;
 
@@ -7,13 +7,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
 
 import rakan.kersh.finalyapplicationrakan.R;
-@Entity
+
 public class AddTaskActivity extends AppCompatActivity {
-    @PrimaryKey(autoGenerate = true)
     private long taskId;
     private String title;
     private String description;
@@ -28,7 +25,6 @@ public class AddTaskActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-
         });
     }
 }

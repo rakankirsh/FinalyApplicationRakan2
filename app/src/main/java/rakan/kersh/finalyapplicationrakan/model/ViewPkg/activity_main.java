@@ -1,4 +1,4 @@
-package rakan.kersh.finalyapplicationrakan.data.ViewPkg;
+package rakan.kersh.finalyapplicationrakan.model.ViewPkg;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,11 +33,13 @@ public class activity_main extends AppCompatActivity {
             return insets;
         });
         btnAddTaskScreen = findViewById(R.id.btnAddTaskScreen);
+
         btnAddTaskScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i=new Intent (activity_main.this, activity_register.class);
+startActivity(i);
             }
-            Intent i=new Intent (activity_main.this, activity_register.class);
 
         });
         btnRegisterScreen = findViewById(R.id.btnRegisterScreen);
