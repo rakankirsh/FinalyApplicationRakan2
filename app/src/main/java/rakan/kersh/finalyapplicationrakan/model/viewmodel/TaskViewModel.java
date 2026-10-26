@@ -14,6 +14,8 @@ import rakan.kersh.finalyapplicationrakan.repositories.TaskRepository;
 public class TaskViewModel extends AndroidViewModel {
     private final TaskRepository repository;
     private final LiveData<List<MyTask>> allTasks;
+    private String title;
+
 
     public TaskViewModel(@NonNull Application application) {
         super(application);
@@ -35,5 +37,34 @@ public class TaskViewModel extends AndroidViewModel {
     public LiveData<MyTask> getTaskById(long taskId) {
    return repository.getTaskById(taskId);
     }
+    public LiveData<List<MyTask>> getTaskByTitle(String title){
+        return repository.getTasksByTitle(title);
     }
+    public LiveData<List<MyTask>> getTasksByDescription(String description) {
+        return repository.getTasksByDescription(description);
+    }
+    public LiveData<List<MyTask>> getTasksByPriority(int priority) {
+        return repository.getTasksByPriority(priority);
+    }
+    public LiveData<List<MyTask>> getTasksByUserIdAndTitle(long userId, String title){
+        return repository.getTasksByUserIdAndTitle(userId, title);
+    }
+    public void insert(MyTask...tasks) {
+        repository.insert(tasks);
+    }
+    public void update(MyTask...tasks){
+        repository.update(tasks);
+    }
+    public void updateTask(long taskId, String description,int priority)
+    {
+        repository.updateTask(taskId, title, description,priority);
+    }
+    public void delete(MyTask...tasks){
+        repository.delete(tasks);
+    }
+    public void deleteTasksById(long taskId){
+        repository.deleteTaskById(taskId);
+    }
+    }
+
 

@@ -65,4 +65,8 @@ public class TaskRepository {
     public void deleteTaskById(long taskId) {
         taskQuery.deleteTaskById(taskId);
     }
+
+    public LiveData<List<MyTask>> getTasksByDescription(String description) {
+        return null;
+    }
 }
