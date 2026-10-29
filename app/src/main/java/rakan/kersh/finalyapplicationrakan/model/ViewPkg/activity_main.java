@@ -1,5 +1,6 @@
 package rakan.kersh.finalyapplicationrakan.model.ViewPkg;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,7 @@ public class activity_main extends AppCompatActivity {
         return super.findViewById(id);
     }
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,8 +39,8 @@ public class activity_main extends AppCompatActivity {
         btnAddTaskScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent (activity_main.this, activity_register.class);
-startActivity(i);
+                Intent i = new Intent(activity_main.this, activity_register.class);
+                startActivity(i);
             }
 
         });
@@ -46,8 +48,9 @@ startActivity(i);
         btnRegisterScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent r=new Intent (activity_main.this,AddTaskActivity.class) ;
-            startActivity(r)
-            ;}
+                Intent r = new Intent(activity_main.this, AddTaskActivity.class);
+                startActivity(r)
+                ;
+            }
         });
     }}

@@ -33,6 +33,10 @@
             android:name=".model.ViewPkg.activity_register"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".model.ViewPkg.signin"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
