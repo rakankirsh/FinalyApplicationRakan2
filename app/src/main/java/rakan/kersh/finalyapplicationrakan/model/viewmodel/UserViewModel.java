@@ -12,34 +12,34 @@ import rakan.kersh.finalyapplicationrakan.model.MyTaskTable.MyTask;
 import rakan.kersh.finalyapplicationrakan.model.MyUserTable.MyUser;
 import rakan.kersh.finalyapplicationrakan.repositories.UserRepository;
 
-public class UserViewModel extends AndroidViewModel {
+    public class UserViewModel extends AndroidViewModel {
 
-    private final UserRepository repository;
-    private final LiveData<List<MyUser>> allUser;
+        private final UserRepository repository;
+        private final LiveData<List<MyUser>> allUser;
 
-    public UserViewModel(@NonNull Application application) {
-        super(application);
-        repository = new UserRepository(application);
-        allUser = repository.getAll();
+        public UserViewModel(@NonNull Application application) {
+            super(application);
+            repository = new UserRepository(application);
+            allUser = repository.getAll();
+        }
+        public LiveData<List<MyUser>> getAllUser()
+        {
+            return getAllUser();
+        }
+        public MyUser checkEmailPassw(String myEmail,String myPassw)
+        {
+            return repository.checkEmailPassw(myEmail,myPassw);
+        }
+        public void insertUser (MyUser...myUsers)
+        {
+            repository.insertUser(myUsers);
+        }
+        public void update(MyUser... user)
+        {
+            repository.update(user);
+        }
+        public void deleteById(MyUser user)
+        {
+            repository.deleteUser(user);
+        }
     }
-    public LiveData<List<MyUser>> getAllUser()
-    {
-        return getAllUser();
-    }
-    public MyUser checkEmailPassw(String myEmail,String myPassw)
-    {
-        return repository.checkEmailPassw(myEmail,myPassw);
-    }
-    public void insertUser (MyUser...myUsers)
-    {
-        repository.insertUser(myUsers);
-    }
-    public void update(MyUser... user)
-    {
-        repository.update(user);
-    }
-    public void deleteById(MyUser user)
-    {
-        repository.deleteUser(user);
-    }
-}
