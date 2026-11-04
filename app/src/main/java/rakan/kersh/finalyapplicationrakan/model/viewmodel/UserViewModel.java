@@ -1,6 +1,7 @@
 package rakan.kersh.finalyapplicationrakan.model.viewmodel;
 
 import android.app.Application;
+import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -41,5 +42,9 @@ import rakan.kersh.finalyapplicationrakan.repositories.UserRepository;
         public void deleteById(MyUser user)
         {
             repository.deleteUser(user);
+        }
+
+        public MyUser login(EditText email, EditText password) {
+            return null;
         }
     }

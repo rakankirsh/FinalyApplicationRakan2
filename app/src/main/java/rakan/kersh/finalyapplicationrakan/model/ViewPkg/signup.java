@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +17,7 @@ import rakan.kersh.finalyapplicationrakan.R;
 
 public class signup extends AppCompatActivity {
     private Button btnsignup;
+    private EditText Usertext, signupGmail, signuppassw;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -29,13 +31,14 @@ public class signup extends AppCompatActivity {
             return insets;
         });
         btnsignup = findViewById(R.id.btnsignup);
-
+        signupGmail = findViewById(R.id.signupGmail);
+        signuppassw = findViewById(R.id.signuppassw);
+        btnsignup = findViewById(R.id.btnsignup);
         btnsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(signup.this, activity_register.class);
-                startActivity(i);
-            }
 
+            }
         });
-    }}
+    }
+    }

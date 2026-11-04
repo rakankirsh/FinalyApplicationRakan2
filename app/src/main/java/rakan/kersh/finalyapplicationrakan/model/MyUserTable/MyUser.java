@@ -38,5 +38,6 @@ public class MyUser
     public void setUid(long uid) {
         this.uid = uid;
     }
+
     //.........
 }
