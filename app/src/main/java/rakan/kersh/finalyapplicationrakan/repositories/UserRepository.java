@@ -35,8 +35,8 @@ public class UserRepository {
         return userQuery.getUserById(userId);
     }
 
-    public void insertUser(MyUser[] myUser) {
-        
+    public void insertUser(MyUser... myUsers) {
+        userQuery.insertAll(myUsers);
     }
     public void deleteUser(MyUser myUser){
         userQuery.delete(myUser);

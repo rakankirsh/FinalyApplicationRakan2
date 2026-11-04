@@ -24,7 +24,7 @@ import rakan.kersh.finalyapplicationrakan.repositories.UserRepository;
         }
         public LiveData<List<MyUser>> getAllUser()
         {
-            return getAllUser();
+            return allUser;
         }
         public MyUser checkEmailPassw(String myEmail,String myPassw)
         {
