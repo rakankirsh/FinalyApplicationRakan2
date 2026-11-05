@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/itmSettings"
+        android:title="21518996995998898898" />
+    <item android:title="itmSignout" />
+    <item
+        android:icon="@mipmap/ocean"
+        android:title="itmHistory" />
+</menu>
