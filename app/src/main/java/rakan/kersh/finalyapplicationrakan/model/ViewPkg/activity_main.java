@@ -3,6 +3,8 @@ package rakan.kersh.finalyapplicationrakan.model.ViewPkg;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -52,5 +54,19 @@ public class activity_main extends AppCompatActivity {
                 startActivity(r)
                 ;
             }
+
         });
-    }}
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+    if(item.getItemId()==R.id.itmSettings){
+
+    }
+    return true;
+    }
+}

@@ -17,7 +17,7 @@ import android.os.Looper;
 
 public class SplashScreen extends AppCompatActivity {
 
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,10 +31,10 @@ public class SplashScreen extends AppCompatActivity {
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+                Intent intent = new Intent(SplashScreen.this, signin.class);
                 startActivity(intent);
                 finish();
             }
-        }, 3000); // 3000 ملي ثانية = 3 ثوانٍ
+        }, 2000); // 3000 ملي ثانية = 3 ثوانٍ
     }
 }
