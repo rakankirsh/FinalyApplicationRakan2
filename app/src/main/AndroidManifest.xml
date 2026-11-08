@@ -11,9 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalyApplicationRakan">
+
+        <!-- SplashScreen set as launcher activity -->
+        <activity
+            android:name=".model.ViewPkg.SplashScreen"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".model.ViewPkg.MainActivity"
-            android:exported="true"
+            android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".model.ViewPkg.AddTaskActivity"
@@ -29,14 +41,8 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".model.ViewPkg.signin"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".model.ViewPkg.signup"
             android:exported="false"
@@ -47,10 +53,6 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".model.ViewPkg.Imageviewer"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".model.ViewPkg.SplashScreen"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
