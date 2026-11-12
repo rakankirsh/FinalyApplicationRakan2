@@ -49,7 +49,7 @@ import rakan.kersh.finalyapplicationrakan.repositories.UserRepository;
             repository.deleteUser(user);
         }
 
-        public MyUser login(EditText email, EditText password) {
-            return null;
+        public MyUser login(String email, String  password) {
+            return repository.checkEmailPassw(email,password);
         }
     }

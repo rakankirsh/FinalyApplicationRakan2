@@ -61,6 +61,13 @@ public class signin extends AppCompatActivity {
                 signinuser();
             }
         });
+        btnsignUpsi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent k = new Intent(signin.this, signup.class);
+                startActivity(k);
+            }
+        });
     }
 
     private void signinuser() {
@@ -80,10 +87,10 @@ public class signin extends AppCompatActivity {
         }
 
         // Perform login check
-        MyUser user = userViewModel.login(Email, Password);
+        MyUser user = userViewModel.login(email, password);
         if (user != null) {
             Toast.makeText(this, "Welcome " + user.getFullName(), Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(signin.this,activity_register.class);
+            Intent intent = new Intent(signin.this,activity_main.class);
             startActivity(intent);
             finish();
         } else {

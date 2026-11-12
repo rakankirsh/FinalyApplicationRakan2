@@ -1,7 +1,10 @@
 package rakan.kersh.finalyapplicationrakan.model.ViewPkg;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,8 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 import rakan.kersh.finalyapplicationrakan.R;
 
 public class activity_register extends AppCompatActivity {
-
-    @SuppressLint("MissingInflatedId")
+    private Button btnRegister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,5 +26,14 @@ public class activity_register extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        btnRegister = findViewById(R.id.btnRegister);
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(activity_register.this, signin.class);
+                startActivity(i);
+            }
+        });
     }
+
 }

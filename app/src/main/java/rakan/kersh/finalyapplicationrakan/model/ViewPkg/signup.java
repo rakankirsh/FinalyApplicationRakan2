@@ -25,7 +25,6 @@ public class signup extends AppCompatActivity {
     private UserViewModel userViewModel;
 
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,17 +65,15 @@ public class signup extends AppCompatActivity {
             signuppassw.requestFocus();
             return;
         }
-        MyUser user = UserViewModel.signup(signupGmail,signuppassw);
-        if (user != null)
+        MyUser m = new MyUser();
+        m.setEmail(SuGmail);
+        m.setPassw(SuPassw);
 
-        {
-            Toast.makeText(this, "Welcome" + user.getFullName(), Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(signup.this, MainActivity.class);
-            startActivity(intent);
+     userViewModel.insertUser(m);
+
+            Toast.makeText(this, "Welcome" + SuGmail, Toast.LENGTH_SHORT).show();
+//            Intent intent = new Intent(signup.this, MainActivity.class);
+//            startActivity(intent);
             finish();
-        } else {
-            Toast.makeText(this,"Invalid email or password", Toast.LENGTH_SHORT).show();
-        }
-
     }
     }
