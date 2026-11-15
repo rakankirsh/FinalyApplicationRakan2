@@ -74,5 +74,15 @@ public class MainActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.itmSettings) {
             Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
         }
+        if (item.getItemId() == R.id.itmSignout) {
+            {
+                Toast.makeText(this, "Sign out", Toast.LENGTH_SHORT).show();
+            }
+            if (item.getItemId() == R.id.itmHistory) {
+                Toast.makeText(this, "History", Toast.LENGTH_SHORT).show();
+            }
+            return true;
+        }
+        return true;
     }
 }
