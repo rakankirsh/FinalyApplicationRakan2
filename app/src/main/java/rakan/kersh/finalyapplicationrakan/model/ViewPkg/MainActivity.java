@@ -1,5 +1,7 @@
 package rakan.kersh.finalyapplicationrakan.model.ViewPkg;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -84,5 +86,27 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return true;
+    }
+
+    public void showYesNoDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Log Out");
+        builder.setMessage("Are you sure?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(MainActivity.this, "Signing out", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(MainActivity.this,"Signing out",Toast.LENGTH_SHORT).show();
+
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
