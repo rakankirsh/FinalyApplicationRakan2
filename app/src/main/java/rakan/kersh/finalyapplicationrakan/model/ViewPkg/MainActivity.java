@@ -32,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
         //kopijopuiop56456456
         setContentView(R.layout.activity_main2);
 
-        btnAddTaskScreen = findViewById(R.id.btnAddTaskScreen);
+
+
+      btnAddTaskScreen = findViewById(R.id.btnAddTaskScreen);
 
         btnAddTaskScreen.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +74,8 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    public boolean onOptionsItemSelected(MenuItem item) {
+
+            public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.itmSettings) {
             Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
         }
