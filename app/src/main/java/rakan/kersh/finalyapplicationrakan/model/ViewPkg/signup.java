@@ -1,6 +1,5 @@
 package rakan.kersh.finalyapplicationrakan.model.ViewPkg;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -21,9 +20,8 @@ import rakan.kersh.finalyapplicationrakan.model.viewmodel.UserViewModel;
 
 public class signup extends AppCompatActivity {
     private Button btnsignup;
-    private EditText Usertext, signupGmail, signuppassw;
+    private EditText signupGmail, signuppassw;
     private UserViewModel userViewModel;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +36,8 @@ public class signup extends AppCompatActivity {
         btnsignup = findViewById(R.id.btnsignup);
         signupGmail = findViewById(R.id.signupGmail);
         signuppassw = findViewById(R.id.signuppassw);
-        btnsignup = findViewById(R.id.btnsignup);
+        userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
+
         btnsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,12 +47,8 @@ public class signup extends AppCompatActivity {
     }
 
     private void signupuser() {
-        Intent r = new Intent(signup.this, activity_register.class);
-        startActivity(r);
-        userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
         String SuGmail = signupGmail.getText().toString().trim();
         String SuPassw = signuppassw.getText().toString().trim();
-
 
         if (SuGmail.isEmpty()){
             signupGmail.setError("Email is required");
@@ -69,11 +64,13 @@ public class signup extends AppCompatActivity {
         m.setEmail(SuGmail);
         m.setPassw(SuPassw);
 
-     userViewModel.insertUser(m);
-
-            Toast.makeText(this, "Welcome" + SuGmail, Toast.LENGTH_SHORT).show();
-//            Intent intent = new Intent(signup.this, MainActivity.class);
-//            startActivity(intent);
-            finish();
+        userViewModel.registerUser(m).observe(this, registeredUser -> {
+            if (registeredUser != null) {
+                Toast.makeText(this, "Welcome " + SuGmail, Toast.LENGTH_SHORT).show();
+                finish();
+            } else {
+                Toast.makeText(this, "Registration failed", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
-    }
+}

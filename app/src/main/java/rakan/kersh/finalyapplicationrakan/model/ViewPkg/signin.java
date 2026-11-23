@@ -1,7 +1,5 @@
 package rakan.kersh.finalyapplicationrakan.model.ViewPkg;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,9 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.lifecycle.ViewModelProvider;
 
-
 import rakan.kersh.finalyapplicationrakan.R;
-import rakan.kersh.finalyapplicationrakan.model.MyUserTable.MyUser;
 import rakan.kersh.finalyapplicationrakan.model.viewmodel.UserViewModel;
 
 public class signin extends AppCompatActivity {
@@ -39,7 +35,6 @@ public class signin extends AppCompatActivity {
             return insets;
         });
 
-        // Initialize UI components and ViewModel
         btnsignUpsi = findViewById(R.id.btnsignUpsi);
         btnsignin = findViewById(R.id.btnsignin);
         Email = findViewById(R.id.Email);
@@ -47,16 +42,6 @@ public class signin extends AppCompatActivity {
 
         userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
 
-        // Navigate to Register Activity on Sign Up button click
-        btnsignUpsi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(signin.this, activity_register.class);
-                startActivity(i);
-            }
-        });
-
-        // Trigger sign-in logic on Sign In button click
         btnsignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,16 +73,15 @@ public class signin extends AppCompatActivity {
             return;
         }
 
-        // Perform login check
-        MyUser user = userViewModel.login(email, password);
-        if (user != null) {
-            Toast.makeText(this, "Welcome " + user.getFullName(), Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(signin.this,activity_main.class);
-            startActivity(intent);
-            finish();
-        } else {
-            Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show();
-        }
+        userViewModel.login(email, password).observe(this, user -> {
+            if (user != null) {
+                Toast.makeText(this, "Welcome " + (user.getFullName() != null ? user.getFullName() : email), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(signin.this, activity_main.class);
+                startActivity(intent);
+                finish();
+            } else {
+                Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
-
 }

@@ -9,7 +9,7 @@ public class MyUser
 {
     @PrimaryKey(autoGenerate = true)//تحديد الصفة كمفتاح رئيسي والذي يُنتجح بشكل تلقائي
     public long keyid;
-    private long uid;
+    private String uid;
     @ColumnInfo(name = "full_Name")//اعطاء اسم جديد للعامود-الصفة في الجدول
     public String fullName;
     public String email;//بحالة لم يتم اعطاء اسم للعامود يكون اسم الصفه هو اسم العامود
@@ -32,10 +32,10 @@ public class MyUser
     public void setFullName(String fullName){
         this.fullName = fullName;
     }
-    public long getUid() {
+    public String getUid() {
         return uid;
     }
-    public void setUid(long uid) {
+    public void setUid(String uid) {
         this.uid = uid;
     }
 
@@ -69,6 +69,10 @@ public class MyUser
 
     public void setPassw(String passw) {
         this.passw = passw;
+    }
+
+    public void setFirestoreUid(String uid) {
+        this.uid = uid;
     }
     //.........
 }
