@@ -14,6 +14,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.google.firebase.firestore.auth.User;
+
 import rakan.kersh.finalyapplicationrakan.R;
 import rakan.kersh.finalyapplicationrakan.model.MyUserTable.MyUser;
 import rakan.kersh.finalyapplicationrakan.model.viewmodel.UserViewModel;
@@ -72,5 +74,6 @@ public class signup extends AppCompatActivity {
                 Toast.makeText(this, "Registration failed", Toast.LENGTH_SHORT).show();
             }
         });
-    }
+    ;}
 }
+
